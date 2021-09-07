@@ -1,0 +1,11 @@
+struct node *insert(struct node *node, int value) {
+  
+  if (node == NULL) return newNode(value);
+
+  if (value < node->value)
+    node->left = insert(node->left, value);
+  else
+    node->right = insert(node->right, value);
+
+  return node;
+}

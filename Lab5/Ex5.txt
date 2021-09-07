@@ -1,0 +1,16 @@
+void smallest(struct node *root)
+{
+    while(root != NULL && root->left != NULL)
+    {
+        root = root->left;
+    }
+    printf("\nSmallest value is %d\n", root->value);
+}
+void largest(struct node *root)
+{
+    while (root != NULL && root->right != NULL)
+    {
+        root = root->right;
+    }
+    printf("\nLargest value is %d", root->value);
+}
